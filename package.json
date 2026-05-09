@@ -1,0 +1,26 @@
+{
+  "name": "mapping-course",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "prepare": "svelte-kit sync || echo ''",
+    "migrate": "node scripts/migrate.js"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-vercel": "^6.3.3",
+    "@sveltejs/kit": "^2.57.0",
+    "@sveltejs/vite-plugin-svelte": "^7.0.0",
+    "dotenv": "^17.4.2",
+    "svelte": "^5.55.2",
+    "vite": "^8.0.7"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.17.2",
+    "resend": "^4.0.0",
+    "stripe": "^17.0.0"
+  }
+}
