@@ -1,11 +1,17 @@
 # mapping-course — Setup Checklist
 
-## Where we are
+## Where we are (as of 2026-05-10)
 
-The full SvelteKit project is scaffolded, builds clean, and is pushed to GitHub:
-https://github.com/jkeefe/mapping-course
+- ✅ Full SvelteKit project scaffolded, builds clean: https://github.com/jkeefe/mapping-course
+- ✅ Turso DB created + migrated
+- ✅ Stripe product created, price ID + secret key in `.env`
+- ✅ Site confirmed working locally at http://localhost:5173
+- ⏳ Stopped at Resend setup — pick up here
 
-The code is complete end-to-end. What's left is wiring up the external services and deploying.
+> **NOTE:** Price is changing from $20 → $29. When doing that:
+> 1. Create a new $29 price in Stripe, get new `price_` ID
+> 2. Update `STRIPE_PRICE_ID` in `.env` and Vercel env vars
+> 3. Update all "$20" copy in `+page.svelte` and `access/+page.svelte`
 
 ---
 
@@ -23,9 +29,12 @@ The code is complete end-to-end. What's left is wiring up the external services 
 - [ ] Copy the **Secret Key** into `.env` as `STRIPE_SECRET_KEY`
 
 ### 3. Resend (email)
-- [ ] Get a Resend API key → `.env` as `RESEND_API_KEY`
-- [ ] Verify a sending domain (or use `onboarding@resend.dev` for testing)
-- [ ] Set that address as `RESEND_FROM` in `.env`
+- [ ] Create account at resend.com
+- [ ] Go to Domains → Add Domain → `reallygoodsmarts.nyc`
+- [ ] Add the DNS records Resend gives you (TXT + MX) to your domain registrar
+- [ ] Click Verify in Resend
+- [ ] Go to API Keys → Create API Key → paste it into `.env` as `RESEND_API_KEY`
+- `RESEND_FROM` is already set to `courses@reallygoodsmarts.nyc`
 
 ### 4. Deploy to Vercel
 - [ ] `cd mapping-course && vercel --prod`

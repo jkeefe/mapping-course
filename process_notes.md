@@ -34,6 +34,14 @@ Built from scratch based on the plan documented in `~/Documents/Claude Projects/
 
 **Video thumbnails:** Using vumbnail.com which provides Vimeo thumbnails by ID without API auth.
 
+## 2026-05-10 — Local preview confirmed working
+
+Ran dev server, opened in Chrome. Site looks correct: header with unlock CTA, free video badges, lock icons on paid videos, lightbox player working. W1V1 real title confirmed: "Hands-on Mapmaking for Journalism — Week 1 • Video 1 — Shapes & Data with Datawrapper" — placeholder titles in videos.js need updating.
+
+Turso DB and Stripe wired up. Stopped before Resend (account not yet created).
+
+Price will change from $20 → $29 before launch — Stripe price ID, env vars, and page copy all need updating when that happens.
+
 ## Next steps (not yet done)
 
 1. **Create Turso DB:** `turso db create mapping-course` → copy URL + token into Vercel env vars
