@@ -2,7 +2,7 @@
 
 ## 2026-05-09 — Project scaffolded
 
-Built from scratch based on the plan documented in `~/Documents/Claude Projects/random/mapping-protomaps.md`.
+Built from scratch based on the plan documented in `~/Documents/Claude-Projects/random/mapping-protomaps.md`.
 
 **Goal:** Self-hosted video course site — 19 Vimeo videos across 4 weeks, first video of each week free, rest unlocked for $20 one-time payment.
 
