@@ -5,7 +5,7 @@
 export const weeks = [
   {
     week: 1,
-    title: 'Week 1 — Getting Started with Maps',
+    title: 'Week 1 — Making Maps with Datawrapper',
     videos: [
       { id: '1148817130', hash: '53f96f9914', title: 'Shapes & Data with Datawrapper', free: true },
       { id: '1148818116', hash: 'b4da7645c7', title: 'Coloring & Classification with Datawrapper', free: false },
@@ -16,7 +16,7 @@ export const weeks = [
   },
   {
     week: 2,
-    title: 'Week 2 — Protomaps Deep Dive',
+    title: 'Week 2 — Geographic Data and Good Practice',
     videos: [
       { id: '1148821054', hash: '51716734cc', title: 'Tips, Tricks and Pitfalls to Avoid', free: true },
       { id: '1148823111', hash: 'a68343f2e0', title: 'Ethical Considerations for Location Data', free: false },
@@ -26,7 +26,7 @@ export const weeks = [
   },
   {
     week: 3,
-    title: 'Week 3 — Data & Interactivity',
+    title: 'Week 3 — Building with Protomaps',
     videos: [
       { id: '1148826006', hash: 'babf87efcf', title: 'Your Copy of the Code Plus Codespaces', free: true },
       { id: '1148826747', hash: '30246e873e', title: 'Our First Protomap', free: false },
@@ -37,7 +37,7 @@ export const weeks = [
   },
   {
     week: 4,
-    title: 'Week 4 — Building Real Projects',
+    title: 'Week 4 — Hosting and Publishing Your Maps',
     videos: [
       { id: '1148834350', hash: '04247c0a12', title: 'Options for Hosting Protomaps on the Internet', free: true },
       { id: '1148836958', hash: '62f2b5eefd', title: 'Basic Map Hosting with Amazon Web Services', free: false },
