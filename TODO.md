@@ -1,17 +1,23 @@
 # mapping-course — Setup Checklist
 
-## Where we are (as of 2026-05-10)
+## Where we are (as of 2026-11-04)
 
 - ✅ Full SvelteKit project scaffolded, builds clean: https://github.com/jkeefe/mapping-course
 - ✅ Turso DB created + migrated
-- ✅ Stripe product created, price ID + secret key in `.env`
+- ✅ Stripe product created at $20, price ID + secret key in the Mac's `.env`
 - ✅ Site confirmed working locally at http://localhost:5173
-- ⏳ Stopped at Resend setup — pick up here
+- ✅ Resend: domain `reallygoodsmarts.nyc` verified, test email delivered (2026-11-04)
+- ✅ Page copy changed $20 → $29 (2026-11-04)
+- ⏳ Next: new $29 Stripe price, then deploy to Vercel
 
-> **NOTE:** Price is changing from $20 → $29. When doing that:
+> **NOTE on the $29 price:** the page copy is done. Still to do:
 > 1. Create a new $29 price in Stripe, get new `price_` ID
 > 2. Update `STRIPE_PRICE_ID` in `.env` and Vercel env vars
-> 3. Update all "$20" copy in `+page.svelte` and `access/+page.svelte`
+
+> **Resend keys** (2026-11-04): two keys exist, stored on the Pi in
+> `~/.credentials/resend.json`. `api_key` is Full access (Pi only).
+> `sending_key` (`mapping-course-vercel`) is sending-only for this domain — that
+> is the one to put in Vercel as `RESEND_API_KEY`.
 
 ---
 
@@ -28,12 +34,13 @@
 - [ ] Copy the **Price ID** (looks like `price_...`) into `.env` as `STRIPE_PRICE_ID`
 - [ ] Copy the **Secret Key** into `.env` as `STRIPE_SECRET_KEY`
 
-### 3. Resend (email)
-- [ ] Create account at resend.com
-- [ ] Go to Domains → Add Domain → `reallygoodsmarts.nyc`
-- [ ] Add the DNS records Resend gives you (TXT + MX) to your domain registrar
-- [ ] Click Verify in Resend
-- [ ] Go to API Keys → Create API Key → paste it into `.env` as `RESEND_API_KEY`
+### 3. Resend (email) — DONE 2026-11-04
+- [x] Create account at resend.com
+- [x] Go to Domains → Add Domain → `reallygoodsmarts.nyc` (region us-east-1)
+- [x] Add the DNS records (4 of them: DKIM TXT, MX + SPF TXT on `send`, CNAME `rsend`)
+      at eNom via the Exact Hosting client area → Domains → DNS Management
+- [x] Verified in Resend; test send landed in the Gmail inbox
+- [x] Sending-only key `mapping-course-vercel` created → goes to Vercel as `RESEND_API_KEY`
 - `RESEND_FROM` is already set to `courses@reallygoodsmarts.nyc`
 
 ### 4. Deploy to Vercel

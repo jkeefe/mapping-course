@@ -50,7 +50,7 @@
         <p>We don't have a purchase on file for that email address.</p>
         <p>
           Want to get full access?
-          <a href="/api/checkout">Unlock all videos for $20</a>
+          <a href="/api/checkout">Unlock all videos for $29</a>
         </p>
       </div>
     {:else}

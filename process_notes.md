@@ -53,3 +53,31 @@ Price will change from $20 → $29 before launch — Stripe price ID, env vars, 
 7. **Set Vimeo embed restrictions:** Paid videos (15 of them) → restrict to course domain only
 8. **End-to-end test:** Use Stripe test card `4242 4242 4242 4242` to verify full flow
 9. **Add video titles:** The titles in `videos.js` are placeholder guesses — update them with real titles from the actual video content
+
+## 2026-11-04 — Picked back up from the Pi; Resend done
+
+Six months on, John (travelling, no Mac) asked Claude on the Pi to find and resume
+this project. The code wasn't on the Pi at all; it turned up by searching GitHub.
+Pi-side notes live in `johnclaude-pi-projects/mapping-course-notes/`.
+
+**Resend.** John created the account and handed Claude a Full-access key. Claude
+added `reallygoodsmarts.nyc` through the API and emailed John the four DNS records
+(Resend now asks for a `rsend` CNAME on top of the DKIM TXT, MX and SPF). The
+registrar is eNom resold through Exact Hosting; DNS is edited in the Exact
+Hosting client area under Domains → DNS Management, not cPanel, and the "use
+default nameservers" option must be avoided or the GitHub Pages and
+email-forwarding records vanish. One record (the CNAME) silently failed to save
+the first time; querying `dns1.name-services.com` directly showed it was missing.
+After re-adding, all four verified within minutes and a test message from
+`courses@reallygoodsmarts.nyc` reached the Gmail inbox, not spam.
+
+A second, sending-only key restricted to this domain was created for Vercel so
+the live site never holds the full-access key. Both are in the Pi's
+`~/.credentials/resend.json`.
+
+**Price copy.** The three "$20" strings in `+page.svelte` and `access/+page.svelte`
+now read $29. The Stripe side (new price, `STRIPE_PRICE_ID`) is still pending
+because the Stripe secret key exists only in the Mac's `.env`.
+
+**Still blocked on:** Stripe/Turso values for Vercel. Everything else for deploy
+is ready: repo access and the Vercel CLI both work from the Pi.
