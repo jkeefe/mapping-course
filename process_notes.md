@@ -81,3 +81,9 @@ because the Stripe secret key exists only in the Mac's `.env`.
 
 **Still blocked on:** Stripe/Turso values for Vercel. Everything else for deploy
 is ready: repo access and the Vercel CLI both work from the Pi.
+
+## 2026-11-04 — Price stays at $20 for now
+
+John decided to leave the price at $20 rather than make the Stripe change away from
+the Mac. The page copy had already gone to $29 in 3822806, which would have shown
+$29 while Stripe charged $20, so the copy is back to $20.

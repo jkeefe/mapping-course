@@ -55,7 +55,7 @@
         <div class="paid-badge">✓ Full access unlocked</div>
       {:else}
         <div class="cta-bar">
-          <a href="/api/checkout" class="btn-unlock">Unlock All Videos — $29</a>
+          <a href="/api/checkout" class="btn-unlock">Unlock All Videos — $20</a>
           <span class="or-link">or <a href="/access">already paid?</a></span>
         </div>
       {/if}
@@ -143,7 +143,7 @@
   {#if !isPaid}
     <div class="bottom-cta container">
       <p>Ready to unlock all 15 remaining videos?</p>
-      <a href="/api/checkout" class="btn-unlock">Get Full Access — $29 one-time</a>
+      <a href="/api/checkout" class="btn-unlock">Get Full Access — $20 one-time</a>
       <p class="access-link">Already paid? <a href="/access">Get a new access link</a></p>
     </div>
   {/if}

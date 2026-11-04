@@ -7,12 +7,12 @@
 - ✅ Stripe product created at $20, price ID + secret key in the Mac's `.env`
 - ✅ Site confirmed working locally at http://localhost:5173
 - ✅ Resend: domain `reallygoodsmarts.nyc` verified, test email delivered (2026-11-04)
-- ✅ Page copy changed $20 → $29 (2026-11-04)
-- ⏳ Next: new $29 Stripe price, then deploy to Vercel
+- ✅ Price stays at **$20** for now (John, 2026-11-04). Page copy matches the existing Stripe price.
+- ⏳ Next: deploy to Vercel
 
-> **NOTE on the $29 price:** the page copy is done. Still to do:
-> 1. Create a new $29 price in Stripe, get new `price_` ID
-> 2. Update `STRIPE_PRICE_ID` in `.env` and Vercel env vars
+> **If the price changes to $29 later:** create a new Stripe price, update
+> `STRIPE_PRICE_ID` in `.env` and Vercel, and update the copy in `+page.svelte`
+> and `access/+page.svelte`.
 
 > **Resend keys** (2026-11-04): two keys exist, stored on the Pi in
 > `~/.credentials/resend.json`. `api_key` is Full access (Pi only).
