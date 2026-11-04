@@ -1,8 +1,10 @@
 <script>
+  import { page } from '$app/state';
   import { weeks, vimeoEmbedUrl, vimeoThumbnailUrl } from '$lib/videos.js';
 
   let { data } = $props();
   let isPaid = $derived(data.isPaid);
+  let justPaid = $derived(page.url.searchParams.get('checkout') === 'success');
 
   let activeVideo = $state(null); // { id, hash, title } — currently playing
 
@@ -53,6 +55,16 @@
 
       {#if isPaid}
         <div class="paid-badge">✓ Full access unlocked</div>
+      {:else if justPaid}
+        <div class="check-email" role="status">
+          <strong>Thanks! Your payment went through.</strong>
+          <p>
+            One more step: we've emailed you a link that unlocks the videos. Open it to
+            start watching. It can take a minute to arrive, so check your spam and
+            promotions folders too.
+          </p>
+          <p>No email? <a href="/access">Send a new link</a>.</p>
+        </div>
       {:else}
         <div class="cta-bar">
           <a href="/api/checkout" class="btn-unlock">Unlock All Videos — $20</a>
@@ -193,6 +205,26 @@
     padding: 6px 18px;
     border-radius: 20px;
     font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  .check-email {
+    margin-top: 1rem;
+    padding: 1rem 1.25rem;
+    max-width: 36rem;
+    background: #ecfdf5;
+    color: #065f46;
+    border: 1px solid #6ee7b7;
+    border-radius: 8px;
+    line-height: 1.5;
+  }
+
+  .check-email p {
+    margin: 0.5rem 0 0;
+  }
+
+  .check-email a {
+    color: inherit;
     font-weight: 600;
   }
 
