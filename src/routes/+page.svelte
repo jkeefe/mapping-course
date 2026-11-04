@@ -152,7 +152,7 @@
   {/each}
 
   <!-- Bottom CTA -->
-  {#if !isPaid}
+  {#if !isPaid && !justPaid}
     <div class="bottom-cta container">
       <p>Ready to unlock all 15 remaining videos?</p>
       <a href="/api/checkout" class="btn-unlock">Get Full Access — $20 one-time</a>
