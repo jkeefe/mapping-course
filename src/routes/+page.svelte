@@ -77,16 +77,22 @@
   <!-- Intro -->
   <section class="intro container">
     <p>
-      This course covers everything you need to build interactive, publication-ready maps —
+      This course covers what you need to build interactive, publication-ready maps —
       from basic setup to custom Protomaps basemaps, vector data overlays, and deployment.
-      Whether you're a journalist, researcher, or developer, you'll finish with a working
-      toolkit and a project you're proud of.
+      Whether you're a journalist, researcher, or developer, you'll finish with a toolkit,
+      code and a couple of working example projects.
+    </p>
+    <p>
+      Originally created for the Knight Center for Journalism in the Americas, the class is
+      now available here — though without the quizzes, certificate and online guidance
+      from me.
     </p>
     <p>
       <a href="https://docs.google.com/document/d/1qxJxRgUNmNYR8QtnkbCXXVeBAGfV7rJsoQ8WK2Lbe7s/edit" target="_blank" rel="noopener">
-        Read the full course introduction →
+        Read the original full course introduction →
       </a>
     </p>
+    <p>If you hit any snags, reach out to me at john (at) reallygoodsmarts (dot) nyc.</p>
 
     {#if isPaid}
       <div class="paid-extras">
