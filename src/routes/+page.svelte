@@ -215,14 +215,19 @@
   }
 
   .check-email {
-    margin-top: 1rem;
+    margin: 1.25rem auto 0;
     padding: 1rem 1.25rem;
     max-width: 36rem;
-    background: #ecfdf5;
-    color: #065f46;
-    border: 1px solid #6ee7b7;
+    background: rgba(255, 255, 255, 0.06);
+    color: #dbe3f5;
+    border: 1px solid rgba(255, 255, 255, 0.14);
     border-radius: 8px;
     line-height: 1.5;
+    text-align: center;
+  }
+
+  .check-email strong {
+    color: #f0f4ff;
   }
 
   .check-email p {
@@ -230,7 +235,7 @@
   }
 
   .check-email a {
-    color: inherit;
+    color: #f0f4ff;
     font-weight: 600;
   }
 
