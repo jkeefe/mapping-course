@@ -92,7 +92,11 @@
         Read the original full course introduction →
       </a>
     </p>
-    <p>If you hit any snags, reach out to me at john (at) reallygoodsmarts (dot) nyc.</p>
+    <p>
+      The course originally spanned four weeks, but all of the videos are available now —
+      and you can go at whatever pace works for you. If you hit any snags, reach out to me
+      at john (at) reallygoodsmarts (dot) nyc.
+    </p>
 
     {#if isPaid}
       <div class="paid-extras">
